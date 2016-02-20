@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>dimmer.xcscheme</key>
+		<key>bitwisehacks.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,7 +12,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>16AE01961C786DB6007164CF</key>
+		<key>71C297E01C786FA100340D24</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>71C297EF1C786FA200340D24</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>71C297FA1C786FA200340D24</key>
 		<dict>
 			<key>primary</key>
 			<true/>

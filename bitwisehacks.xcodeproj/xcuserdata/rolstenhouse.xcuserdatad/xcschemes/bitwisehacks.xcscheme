@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0720"
+   LastUpgradeVersion = "0700"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "16AE01961C786DB6007164CF"
-               BuildableName = "dimmer"
-               BlueprintName = "dimmer"
-               ReferencedContainer = "container:dimmer.xcodeproj">
+               BlueprintIdentifier = "71C297E01C786FA100340D24"
+               BuildableName = "bitwisehacks.app"
+               BlueprintName = "bitwisehacks"
+               ReferencedContainer = "container:bitwisehacks.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,14 +28,34 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "71C297EF1C786FA200340D24"
+               BuildableName = "bitwisehacksTests.xctest"
+               BlueprintName = "bitwisehacksTests"
+               ReferencedContainer = "container:bitwisehacks.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "71C297FA1C786FA200340D24"
+               BuildableName = "bitwisehacksUITests.xctest"
+               BlueprintName = "bitwisehacksUITests"
+               ReferencedContainer = "container:bitwisehacks.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "16AE01961C786DB6007164CF"
-            BuildableName = "dimmer"
-            BlueprintName = "dimmer"
-            ReferencedContainer = "container:dimmer.xcodeproj">
+            BlueprintIdentifier = "71C297E01C786FA100340D24"
+            BuildableName = "bitwisehacks.app"
+            BlueprintName = "bitwisehacks"
+            ReferencedContainer = "container:bitwisehacks.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -55,10 +75,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "16AE01961C786DB6007164CF"
-            BuildableName = "dimmer"
-            BlueprintName = "dimmer"
-            ReferencedContainer = "container:dimmer.xcodeproj">
+            BlueprintIdentifier = "71C297E01C786FA100340D24"
+            BuildableName = "bitwisehacks.app"
+            BlueprintName = "bitwisehacks"
+            ReferencedContainer = "container:bitwisehacks.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -74,10 +94,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "16AE01961C786DB6007164CF"
-            BuildableName = "dimmer"
-            BlueprintName = "dimmer"
-            ReferencedContainer = "container:dimmer.xcodeproj">
+            BlueprintIdentifier = "71C297E01C786FA100340D24"
+            BuildableName = "bitwisehacks.app"
+            BlueprintName = "bitwisehacks"
+            ReferencedContainer = "container:bitwisehacks.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
