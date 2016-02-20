@@ -15,7 +15,6 @@
 		71C298001C786FA200340D24 /* bitwisehacksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C297FF1C786FA200340D24 /* bitwisehacksUITests.swift */; };
 		71C2980F1C7886E700340D24 /* QuotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C2980D1C7886E700340D24 /* QuotesViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		71C298101C7886E700340D24 /* QuotesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71C2980E1C7886E700340D24 /* QuotesViewController.xib */; settings = {ASSET_TAGS = (); }; };
-		71C298121C78884300340D24 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C298111C78884300340D24 /* Quote.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +49,6 @@
 		71C298011C786FA200340D24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		71C2980D1C7886E700340D24 /* QuotesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuotesViewController.swift; sourceTree = "<group>"; };
 		71C2980E1C7886E700340D24 /* QuotesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuotesViewController.xib; sourceTree = "<group>"; };
-		71C298111C78884300340D24 /* Quote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,7 +109,6 @@
 			children = (
 				714231CF1C78D7FE0042EF6E /* Resources */,
 				71C297E41C786FA100340D24 /* AppDelegate.swift */,
-				71C298111C78884300340D24 /* Quote.swift */,
 				71C2980D1C7886E700340D24 /* QuotesViewController.swift */,
 				71C2980E1C7886E700340D24 /* QuotesViewController.xib */,
 				71C297E61C786FA100340D24 /* Assets.xcassets */,
@@ -271,7 +268,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				71C297E51C786FA100340D24 /* AppDelegate.swift in Sources */,
-				71C298121C78884300340D24 /* Quote.swift in Sources */,
 				71C2980F1C7886E700340D24 /* QuotesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
