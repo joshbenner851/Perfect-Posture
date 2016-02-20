@@ -51,7 +51,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
         
         popover.contentViewController = QuotesViewController(nibName: "QuotesViewController", bundle: nil)
-        while (true) {
+        //while (true) {
             httpGet(){ (data, error) -> Void in
                 if error != nil {
                     print("error\n")
@@ -81,7 +81,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 }
             }
         sleep(5)
-        }
+        //}
         
     }
     
