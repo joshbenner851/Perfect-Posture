@@ -9,6 +9,7 @@ class QuotesViewController: NSViewController {
     
     @IBOutlet weak var labelPause: NSButton!
 
+    @IBOutlet weak var calibrateButton: NSButton!
 }
 
 extension QuotesViewController {
@@ -30,11 +31,10 @@ extension QuotesViewController {
         }
     }
 
-    @IBAction func calibrate(sender: AnyObject) {
+    @IBAction func calibrate(sender: NSButton) {
         isCalibrating = true
         print("CALIBRATE BITCH")
     }
-
     @IBAction func togglePause(sender: NSButton) {
         if(!paused){
             paused = true;

@@ -7,6 +7,7 @@
         <customObject id="-2" userLabel="File's Owner" customClass="QuotesViewController" customModule="bitwisehacks" customModuleProvider="target">
             <connections>
                 <outlet property="calibrate" destination="nrB-Vg-s5S" id="m85-8t-uU1"/>
+                <outlet property="calibrateButton" destination="nrB-Vg-s5S" id="P5l-c2-W99"/>
                 <outlet property="labelPause" destination="aHV-Zd-UhX" id="huI-il-LPW"/>
                 <outlet property="slider" destination="NJC-TH-pDc" id="Ygv-3A-uwZ"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
@@ -46,7 +47,7 @@
                         <font key="font" metaFont="system"/>
                     </buttonCell>
                     <connections>
-                        <action selector="calibrate:" target="-2" id="Fw2-rl-i9T"/>
+                        <action selector="calibrate:" target="-2" id="OHs-SO-bCz"/>
                     </connections>
                 </button>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ben-Hb-kbI">
