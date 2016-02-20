@@ -20,6 +20,9 @@ class QuotesViewController: NSViewController {
 //    func updateQuote(){
 //        textLabel.stringValue = String(quotes[currentQuoteIndex])
 //    }
+    
+    //print("Hello, World!")
+    
 
 }
 
@@ -27,20 +30,47 @@ class QuotesViewController: NSViewController {
 
 extension QuotesViewController {
     
-    
     @IBAction func quit(sender: NSButton) {
         NSApplication.sharedApplication().terminate(sender)
     }
     
     @IBAction func dimScreen(sender: NSButton){
-        for _ in 1...20{
-        let task = NSTask()
-        task.launchPath="/usr/bin/osascript"
-        //TODO Make locally called script file
-        task.arguments = ["/Users/rolstenhouse/Desktop/dim.script"]
-        task.launch()
-        }
+//        for _ in 1...20{
+//        let task = NSTask()
+//        task.launchPath="/usr/bin/osascript"
+//        //TODO Make locally called script file
+//        task.arguments = ["/Users/rolstenhouse/Desktop/dim.script"]
+//        task.launch()
+        
+        
+        
+        //}
     }
+    
+    //
+//    httpGet(request){ (data, error) -> Void in
+//    if error != nil {
+//    print("error\n")
+//    print(error)
+//    } else {
+//    print("data\n")
+//    let data = data.dataUsingEncoding(NSUTF8StringEncoding)!
+//    do {
+//    let json: NSDictionary = try (NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers) as? NSDictionary)!
+//    print(json["values"])
+//    print("\n")
+//    }
+//    catch {
+//    print("error")
+//    }
+//    }
+//    }
+    
+    //request.addValue("a1ee3f921f91ea334dd4b03386284375", forHTTPHeaderField: "X-M2X-KEY")
+    
+//    print("after task\n")
+//    
+//    while (true) {}
     
     
 }
