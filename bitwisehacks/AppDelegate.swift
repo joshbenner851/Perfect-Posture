@@ -9,8 +9,9 @@
 import Cocoa
 
 var isCalibrating = false
-var paused = false;
+var paused = true;
 var sensitivity = 0;
+var threshold = 45;
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -46,7 +47,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func applicationDidFinishLaunching(notification: NSNotification) {
         
-        var threshold = 45
+        //var threshold = 45
         sensitivity = 0;
         
         if let button = statusItem.button {
@@ -55,12 +56,17 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
         
         popover.contentViewController = QuotesViewController(nibName: "QuotesViewController", bundle: nil)
+        mainCall()
+    }
+    
+    func mainCall(){
         let queue = NSOperationQueue()
         
         queue.addOperationWithBlock() {
             // do something in the background
             var calibrateCount = 3
             var calibrateSum = 0
+            //Figure out some way to pause all the information
             while (!paused) {
                 self.httpGet(){ (data, error) -> Void in
                     if error != nil {
@@ -106,8 +112,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 }
                 sleep(5)
             }
-
+            
         }
+
     }
     
     func dimScreen(){
