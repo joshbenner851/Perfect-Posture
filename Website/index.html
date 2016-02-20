@@ -10,7 +10,10 @@ $view =
             <title>Posture Perfect</title>
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+            <script src="dist/m2x-3.1.0.js"></script>
+            <script src="m2xData.js"><</script>
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
 
         </head>
 
@@ -82,5 +85,16 @@ $view =
 
                     </script>
             </div>
+                <label>API Key:</label>
+                <input type="text" name="api-key">
+
+                <label>Device ID:</label>
+                <input type="text" name="device-id">
+
+                <fieldset id="device-view">
+                    <legend>Get device information</legend>
+                    <pre><code></code></pre>
+                    <button>Get</button>
+                </fieldset>
         </body>
     </html>
