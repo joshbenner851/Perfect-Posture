@@ -8,6 +8,8 @@
 
 import Cocoa
 
+var isCalibrating = false
+
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
     
@@ -18,7 +20,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func httpGet(callback: (String, String?) -> Void) {
         
-        let url: NSURL = NSURL(string: "https://api-m2x.att.com/v2/devices/286efac3f04c4a7433c6f94116f80a24/streams/posture/values?limit=10")!
+        let url: NSURL = NSURL(string: "https://api-m2x.att.com/v2/devices/286efac3f04c4a7433c6f94116f80a24/streams/posture/values?limit=2")!
         
         let request = NSMutableURLRequest(URL: url)
         request.HTTPMethod = "GET"
@@ -37,13 +39,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 callback(result as String, nil)
             }
         }
-        print("hi")
         task.resume()
     }
     
     func applicationDidFinishLaunching(notification: NSNotification) {
         
-        let threshold = 45
+        var threshold = 45
         
         if let button = statusItem.button {
             button.image = NSImage(named: "statusIcon")
@@ -51,44 +52,65 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
         
         popover.contentViewController = QuotesViewController(nibName: "QuotesViewController", bundle: nil)
-        //while (true) {
-            httpGet(){ (data, error) -> Void in
-                if error != nil {
-                    print("error\n")
-                    print(error)
-                } else {
-                    print("data\n")
-                    let data = data.dataUsingEncoding(NSUTF8StringEncoding)!
-                    do {
-                        let json: NSDictionary = try (NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers) as? NSDictionary)!
-                        let values = json["values"] as! NSArray
-                        var count = 0
-                        var sum = 0
-                        for val in values {
-                            print(val["value"])
-                            print("\n")
-                            let angle = val["value"] as! Int
-                            sum = sum + angle
-                            count = count + 1
+        let queue = NSOperationQueue()
+        
+        queue.addOperationWithBlock() {
+            // do something in the background
+            var calibrateCount = 3
+            var calibrateSum = 0
+            while (true) {
+                self.httpGet(){ (data, error) -> Void in
+                    if error != nil {
+                        print("error\n")
+                        print(error)
+                    } else {
+                        let data = data.dataUsingEncoding(NSUTF8StringEncoding)!
+                        do {
+                            let json: NSDictionary = try (NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers) as? NSDictionary)!
+                            let values = json["values"] as! NSArray
+                            var count = 0
+                            var sum = 0
+                            for val in values {
+                                print(val["value"])
+                                print("\n")
+                                let angle = val["value"] as! Int
+                                sum = sum + angle
+                                count = count + 1
+                            }
+                            if isCalibrating {
+                                print("calibrating...")
+                                calibrateCount = calibrateCount - 1
+                                calibrateSum = calibrateSum + sum/count
+                                if 0 == calibrateCount {
+                                    threshold = calibrateSum / 3
+                                    isCalibrating = false
+                                    print("new threshold")
+                                    print(threshold)
+                                    print("\n")
+                                }
+                            }
+                            else if sum / count < threshold {
+                                self.dimScreen()
+                                sleep(5)
+                                //print("dim")
+                            }
                         }
-                        if sum / count < threshold {
-                            self.dimScreen()
+                        catch {
+                            print("error")
                         }
-                    }
-                    catch {
-                        print("error")
                     }
                 }
+                sleep(5)
             }
-        sleep(5)
-        //}
-        
+
+        }
     }
     
     func dimScreen(){
         let path = NSBundle.mainBundle().pathForResource("dim", ofType: "script")
         let url = NSURL(string: path!)
         let urlString: String = url!.path!
+
         let tempString = "\(urlString)"
         for _ in 1...20{
             let task = NSTask()
