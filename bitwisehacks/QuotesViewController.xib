@@ -7,6 +7,8 @@
         <customObject id="-2" userLabel="File's Owner" customClass="QuotesViewController" customModule="bitwisehacks" customModuleProvider="target">
             <connections>
                 <outlet property="calibrate" destination="nrB-Vg-s5S" id="m85-8t-uU1"/>
+                <outlet property="labelPause" destination="aHV-Zd-UhX" id="huI-il-LPW"/>
+                <outlet property="slider" destination="NJC-TH-pDc" id="Ygv-3A-uwZ"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>
@@ -26,23 +28,16 @@
                         <action selector="quit:" target="-2" id="sX7-vQ-r8C"/>
                     </connections>
                 </button>
-                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FGh-mf-5w2">
-                    <rect key="frame" x="25" y="13" width="65" height="32"/>
-                    <buttonCell key="cell" type="push" title="Dim" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="7NL-FX-KgQ">
-                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system"/>
-                    </buttonCell>
-                    <connections>
-                        <action selector="dimScreen:" target="-2" id="i9E-zf-glp"/>
-                    </connections>
-                </button>
                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p6P-7I-uH6">
                     <rect key="frame" x="220" y="37" width="202" height="136"/>
                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Evolution" id="Jdl-4X-ZU2"/>
                 </imageView>
                 <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s79-w7-LNX">
                     <rect key="frame" x="218" y="11" width="206" height="20"/>
-                    <sliderCell key="cell" state="on" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="NJC-TH-pDc"/>
+                    <sliderCell key="cell" alignment="left" maxValue="10" doubleValue="5" tickMarkPosition="above" sliderType="linear" id="NJC-TH-pDc"/>
+                    <connections>
+                        <action selector="changeSlider:" target="-2" id="LR6-Bu-BeW"/>
+                    </connections>
                 </slider>
                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nrB-Vg-s5S">
                     <rect key="frame" x="46" y="122" width="96" height="32"/>
@@ -70,6 +65,26 @@
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aHV-Zd-UhX">
+                    <rect key="frame" x="20" y="13" width="79" height="32"/>
+                    <buttonCell key="cell" type="push" title="Pause" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="mAw-Y9-UgH">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="togglePause:" target="-2" id="vQd-ci-hfm"/>
+                    </connections>
+                </button>
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FGh-mf-5w2">
+                    <rect key="frame" x="343" y="157" width="65" height="32"/>
+                    <buttonCell key="cell" type="push" title="Dim" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="7NL-FX-KgQ">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="dimScreen:" target="-2" id="i9E-zf-glp"/>
+                    </connections>
+                </button>
             </subviews>
             <point key="canvasLocation" x="112" y="-27.5"/>
         </customView>

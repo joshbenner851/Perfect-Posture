@@ -5,6 +5,9 @@ class QuotesViewController: NSViewController {
     @IBOutlet var textLabel: NSTextField!
     
     
+    @IBOutlet weak var slider: NSSliderCell!
+    
+    @IBOutlet weak var labelPause: NSButton!
 
 }
 
@@ -32,5 +35,21 @@ extension QuotesViewController {
         print("CALIBRATE BITCH")
     }
 
+    @IBAction func togglePause(sender: NSButton) {
+        if(!paused){
+            paused = true;
+            labelPause.title = "Play"
+        }
+        else{
+            paused = false;
+            labelPause.title = "Pause"
+        }
+    }
+    
+    @IBAction func changeSlider(sender: NSSlider) {
+        print(sender.integerValue)
+        sensitivity = sender.integerValue
+    }
+    
 }
 

@@ -9,6 +9,8 @@
 import Cocoa
 
 var isCalibrating = false
+var paused = false;
+var sensitivity = 0;
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -45,6 +47,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(notification: NSNotification) {
         
         var threshold = 45
+        sensitivity = 0;
         
         if let button = statusItem.button {
             button.image = NSImage(named: "statusIcon")
@@ -58,7 +61,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             // do something in the background
             var calibrateCount = 3
             var calibrateSum = 0
-            while (true) {
+            while (!paused) {
                 self.httpGet(){ (data, error) -> Void in
                     if error != nil {
                         print("error\n")
@@ -89,7 +92,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                                     print("\n")
                                 }
                             }
-                            else if sum / count < threshold {
+                                //Adding sensitivity from the slider to scale value
+                            else if sum / count < threshold+sensitivity {
                                 self.dimScreen()
                                 sleep(5)
                                 //print("dim")
