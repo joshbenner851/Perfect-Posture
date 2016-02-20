@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		714231CE1C78D3D20042EF6E /* dim.script in Resources */ = {isa = PBXBuildFile; fileRef = 714231CD1C78D3D20042EF6E /* dim.script */; settings = {ASSET_TAGS = (); }; };
 		71C297E51C786FA100340D24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C297E41C786FA100340D24 /* AppDelegate.swift */; };
 		71C297E71C786FA100340D24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71C297E61C786FA100340D24 /* Assets.xcassets */; };
 		71C297EA1C786FA200340D24 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71C297E81C786FA200340D24 /* MainMenu.xib */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		714231CD1C78D3D20042EF6E /* dim.script */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = dim.script; path = ../../bitwisehacks/bitwisehacks/Assets.xcassets/resources/dim.script; sourceTree = "<group>"; };
 		71C297E11C786FA100340D24 /* bitwisehacks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bitwisehacks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71C297E41C786FA100340D24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		71C297E61C786FA100340D24 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -76,6 +78,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		714231CF1C78D7FE0042EF6E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				714231CD1C78D3D20042EF6E /* dim.script */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		71C297D81C786FA100340D24 = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +109,7 @@
 		71C297E31C786FA100340D24 /* bitwisehacks */ = {
 			isa = PBXGroup;
 			children = (
+				714231CF1C78D7FE0042EF6E /* Resources */,
 				71C297E41C786FA100340D24 /* AppDelegate.swift */,
 				71C298111C78884300340D24 /* Quote.swift */,
 				71C2980D1C7886E700340D24 /* QuotesViewController.swift */,
@@ -234,6 +245,7 @@
 				71C298101C7886E700340D24 /* QuotesViewController.xib in Resources */,
 				71C297E71C786FA100340D24 /* Assets.xcassets in Resources */,
 				71C297EA1C786FA200340D24 /* MainMenu.xib in Resources */,
+				714231CE1C78D3D20042EF6E /* dim.script in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,6 +494,7 @@
 				71C298061C786FA200340D24 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		71C298071C786FA200340D24 /* Build configuration list for PBXNativeTarget "bitwisehacksTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +503,7 @@
 				71C298091C786FA200340D24 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		71C2980A1C786FA200340D24 /* Build configuration list for PBXNativeTarget "bitwisehacksUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +512,7 @@
 				71C2980C1C786FA200340D24 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
