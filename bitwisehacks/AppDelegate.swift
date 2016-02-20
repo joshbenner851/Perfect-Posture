@@ -46,7 +46,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func httpGet(callback: (String, String?) -> Void) {
         
-        let url: NSURL = NSURL(string: "https://api-m2x.att.com/v2/devices/286efac3f04c4a7433c6f94116f80a24/streams/posture/values")!
+        let url: NSURL = NSURL(string: "https://api-m2x.att.com/v2/devices/286efac3f04c4a7433c6f94116f80a24/streams/posture/values?limit=15")!
         
         let request = NSMutableURLRequest(URL: url)
         request.HTTPMethod = "GET"
@@ -76,25 +76,38 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
         
         popover.contentViewController = QuotesViewController(nibName: "QuotesViewController", bundle: nil)
-        
-        httpGet(){ (data, error) -> Void in
-            if error != nil {
-                print("error\n")
-                print(error)
-            } else {
-                print("data\n")
-                let data = data.dataUsingEncoding(NSUTF8StringEncoding)!
-                do {
-                    let json: NSDictionary = try (NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers) as? NSDictionary)!
-                    print(json["values"])
-                    print("\n")
-                }
-                catch {
-                    print("error")
+        while (true) {
+            httpGet(){ (data, error) -> Void in
+                if error != nil {
+                    print("error\n")
+                    print(error)
+                } else {
+                    print("data\n")
+                    let data = data.dataUsingEncoding(NSUTF8StringEncoding)!
+                    do {
+                        let json: NSDictionary = try (NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers) as? NSDictionary)!
+                        print(json["values"])
+                        print("\n")
+                        self.dimScreen()
+                    }
+                    catch {
+                        print("error")
+                    }
                 }
             }
+        sleep(100)
         }
         
+    }
+    
+    func dimScreen(){
+        for _ in 1...20{
+            let task = NSTask()
+            task.launchPath="/usr/bin/osascript"
+            //TODO Make locally called script file
+            task.arguments = ["/Users/ethanraymond/Desktop/dim.script"]
+            task.launch()
+        }
     }
     
     func showPopover(sender: AnyObject?) {
