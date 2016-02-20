@@ -35,16 +35,26 @@ extension QuotesViewController {
     }
     
     @IBAction func dimScreen(sender: NSButton){
-//        for _ in 1...20{
-//        let task = NSTask()
-//        task.launchPath="/usr/bin/osascript"
-//        //TODO Make locally called script file
-//        task.arguments = ["/Users/rolstenhouse/Desktop/dim.script"]
-//        task.launch()
+        let path = NSBundle.mainBundle().pathForResource("dim", ofType: "script")
+        let url = NSURL(string: path!)
+        let urlString: String = url!.path!
+//        
+//        let contentData = NSFileManager.defaultManager().contentsAtPath(path!)
+//        
+//        let content = NSString(data: url!, encoding: NSUTF8StringEncoding) as? String
+        
+        let tempString = "\(urlString)"
+        for _ in 1...20{
+        let task = NSTask()
+        task.launchPath="/usr/bin/osascript"
+        //TODO Make locally called script file
+           
+        task.arguments = [tempString]
+        task.launch()
         
         
         
-        //}
+        }
     }
     
     //

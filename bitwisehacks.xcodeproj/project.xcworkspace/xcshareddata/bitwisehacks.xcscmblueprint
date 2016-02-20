@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "B7C1B3CD6C24C585019785D02DFAB2A823D11C46",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "B7C1B3CD6C24C585019785D02DFAB2A823D11C46" : 0,
+    "9FB42ED4F24BA190D493E28B9CD3573D35D9CC7E" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "0FB27670-C1CD-45EA-9D11-2F842CB69F50",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "B7C1B3CD6C24C585019785D02DFAB2A823D11C46" : "PostureFixer\/",
+    "9FB42ED4F24BA190D493E28B9CD3573D35D9CC7E" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "bitwisehacks",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "bitwisehacks.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/joshbenner851\/bitwisehacks.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9FB42ED4F24BA190D493E28B9CD3573D35D9CC7E"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/joshbenner851\/PostureFixer",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "B7C1B3CD6C24C585019785D02DFAB2A823D11C46"
+    }
+  ]
+}
