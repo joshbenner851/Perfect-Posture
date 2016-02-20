@@ -46,7 +46,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func httpGet(callback: (String, String?) -> Void) {
         
-        let url: NSURL = NSURL(string: "https://api-m2x.att.com/v2/devices/286efac3f04c4a7433c6f94116f80a24/streams/posture/values?limit=15")!
+        let url: NSURL = NSURL(string: "https://api-m2x.att.com/v2/devices/286efac3f04c4a7433c6f94116f80a24/streams/posture/values?limit=10")!
         
         let request = NSMutableURLRequest(URL: url)
         request.HTTPMethod = "GET"
@@ -70,6 +70,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     func applicationDidFinishLaunching(notification: NSNotification) {
+        
+        let threshold = 45
+        
         if let button = statusItem.button {
             button.image = NSImage(named: "statusIcon")
             button.action = Selector("togglePopover:")
@@ -86,16 +89,26 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                     let data = data.dataUsingEncoding(NSUTF8StringEncoding)!
                     do {
                         let json: NSDictionary = try (NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers) as? NSDictionary)!
-                        print(json["values"])
-                        print("\n")
-                        self.dimScreen()
+                        let values = json["values"] as! NSArray
+                        var count = 0
+                        var sum = 0
+                        for val in values {
+                            print(val["value"])
+                            print("\n")
+                            let angle = val["value"] as! Int
+                            sum = sum + angle
+                            count = count + 1
+                        }
+                        if sum / count < threshold {
+                            self.dimScreen()
+                        }
                     }
                     catch {
                         print("error")
                     }
                 }
             }
-        sleep(100)
+        sleep(5)
         }
         
     }
