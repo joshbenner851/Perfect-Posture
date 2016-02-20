@@ -9,9 +9,9 @@
 import Cocoa
 
 var isCalibrating = false
-var paused = true;
+var paused = false;
 var sensitivity = 0;
-var threshold = 45;
+var threshold = 30;
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -91,7 +91,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                                 calibrateCount = calibrateCount - 1
                                 calibrateSum = calibrateSum + sum/count
                                 if 0 == calibrateCount {
-                                    threshold = calibrateSum / 3
+                                    threshold = (calibrateSum / 3) - 20
                                     isCalibrating = false
                                     print("new threshold")
                                     print(threshold)
