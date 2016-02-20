@@ -9,6 +9,15 @@
 	</head>
 	<body>
 		<h1 class="text-center">Posture Perfect</h1>
-		
+		<div class="container">
+			<div class="row">
+				<p class="text-center"><img src="">Sign in with Twitter</p>
+			</div>
+			<script type="text/javascript">
+				var xhr = new XMLHttpRequest();
+				xhr.open("GET", "https://www.codecademy.com/", false);
+				xhr.send();
+			</script>
+		</div>
 	</body>
 </html>
