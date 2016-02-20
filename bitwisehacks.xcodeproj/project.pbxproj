@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		714231CE1C78D3D20042EF6E /* dim.script in Resources */ = {isa = PBXBuildFile; fileRef = 714231CD1C78D3D20042EF6E /* dim.script */; settings = {ASSET_TAGS = (); }; };
+		3071EBCE1C7902E800209B65 /* dim.script in Resources */ = {isa = PBXBuildFile; fileRef = 3071EBCD1C7902E800209B65 /* dim.script */; };
 		71C297E51C786FA100340D24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C297E41C786FA100340D24 /* AppDelegate.swift */; };
 		71C297E71C786FA100340D24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71C297E61C786FA100340D24 /* Assets.xcassets */; };
 		71C297EA1C786FA200340D24 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71C297E81C786FA200340D24 /* MainMenu.xib */; };
 		71C297F51C786FA200340D24 /* bitwisehacksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C297F41C786FA200340D24 /* bitwisehacksTests.swift */; };
 		71C298001C786FA200340D24 /* bitwisehacksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C297FF1C786FA200340D24 /* bitwisehacksUITests.swift */; };
-		71C2980F1C7886E700340D24 /* QuotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C2980D1C7886E700340D24 /* QuotesViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		71C298101C7886E700340D24 /* QuotesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71C2980E1C7886E700340D24 /* QuotesViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		71C2980F1C7886E700340D24 /* QuotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C2980D1C7886E700340D24 /* QuotesViewController.swift */; };
+		71C298101C7886E700340D24 /* QuotesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71C2980E1C7886E700340D24 /* QuotesViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		714231CD1C78D3D20042EF6E /* dim.script */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = dim.script; path = ../../bitwisehacks/bitwisehacks/Assets.xcassets/resources/dim.script; sourceTree = "<group>"; };
+		3071EBCD1C7902E800209B65 /* dim.script */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = dim.script; path = Assets.xcassets/resources/dim.script; sourceTree = "<group>"; };
 		71C297E11C786FA100340D24 /* bitwisehacks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bitwisehacks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71C297E41C786FA100340D24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		71C297E61C786FA100340D24 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -79,7 +79,7 @@
 		714231CF1C78D7FE0042EF6E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				714231CD1C78D3D20042EF6E /* dim.script */,
+				3071EBCD1C7902E800209B65 /* dim.script */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -241,8 +241,8 @@
 			files = (
 				71C298101C7886E700340D24 /* QuotesViewController.xib in Resources */,
 				71C297E71C786FA100340D24 /* Assets.xcassets in Resources */,
+				3071EBCE1C7902E800209B65 /* dim.script in Resources */,
 				71C297EA1C786FA200340D24 /* MainMenu.xib in Resources */,
-				714231CE1C78D3D20042EF6E /* dim.script in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

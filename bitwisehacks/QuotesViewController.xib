@@ -6,6 +6,7 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="QuotesViewController" customModule="bitwisehacks" customModuleProvider="target">
             <connections>
+                <outlet property="calibrate" destination="nrB-Vg-s5S" id="m85-8t-uU1"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>
@@ -57,6 +58,9 @@
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
+                    <connections>
+                        <action selector="calibrate:" target="-2" id="Fw2-rl-i9T"/>
+                    </connections>
                 </button>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ben-Hb-kbI">
                     <rect key="frame" x="50" y="144" width="119" height="31"/>

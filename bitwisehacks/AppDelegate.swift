@@ -8,6 +8,8 @@
 
 import Cocoa
 
+var isCalibrating = false
+
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
     
@@ -24,29 +26,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     //  Copyright © 2016 Josh Benner. All rights reserved.
     
     
-    
-//    func applicationDidFinishLaunching(aNotification: NSNotification) {
-//        let icon = NSImage(named: "statusIcon")
-//        icon?.template
-//        
-//        if let button = statusItem.button {
-//            button.image = icon
-//            button.action = Selector("printQuote:")
-//            button.menu = statusMenu
-//        }
-//        
-//        let menu = NSMenu()
-//        
-//        menu.addItem(NSMenuItem(title: "Print Quote", action: Selector("printQuote:"), keyEquivalent: "P"))
-//        menu.addItem(NSMenuItem.separatorItem())
-//        menu.addItem(NSMenuItem(title: "Quit Quotes", action: Selector("terminate:"), keyEquivalent: "q"))
-//        
-//        statusItem.menu = menu
-//    }
-    
     func httpGet(callback: (String, String?) -> Void) {
         
-        let url: NSURL = NSURL(string: "https://api-m2x.att.com/v2/devices/286efac3f04c4a7433c6f94116f80a24/streams/posture/values?limit=10")!
+        let url: NSURL = NSURL(string: "https://api-m2x.att.com/v2/devices/286efac3f04c4a7433c6f94116f80a24/streams/posture/values?limit=2")!
         
         let request = NSMutableURLRequest(URL: url)
         request.HTTPMethod = "GET"
@@ -65,13 +47,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 callback(result as String, nil)
             }
         }
-        print("hi")
         task.resume()
     }
     
     func applicationDidFinishLaunching(notification: NSNotification) {
         
-        let threshold = 45
+        var threshold = 45
         
         if let button = statusItem.button {
             button.image = NSImage(named: "statusIcon")
@@ -84,13 +65,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         queue.addOperationWithBlock() {
             // do something in the background
+            var calibrateCount = 3
+            var calibrateSum = 0
             while (true) {
                 self.httpGet(){ (data, error) -> Void in
                     if error != nil {
                         print("error\n")
                         print(error)
                     } else {
-                        print("data\n")
                         let data = data.dataUsingEncoding(NSUTF8StringEncoding)!
                         do {
                             let json: NSDictionary = try (NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers) as? NSDictionary)!
@@ -104,8 +86,21 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                                 sum = sum + angle
                                 count = count + 1
                             }
-                            if sum / count < threshold {
+                            if isCalibrating {
+                                print("calibrating...")
+                                calibrateCount = calibrateCount - 1
+                                calibrateSum = calibrateSum + sum/count
+                                if 0 == calibrateCount {
+                                    threshold = calibrateSum / 3
+                                    isCalibrating = false
+                                    print("new threshold")
+                                    print(threshold)
+                                    print("\n")
+                                }
+                            }
+                            else if sum / count < threshold {
                                 self.dimScreen()
+                                sleep(5)
                                 //print("dim")
                             }
                         }
@@ -117,32 +112,27 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 sleep(5)
             }
 
-            
-            //NSOperationQueue.mainQueue().addOperationWithBlock() {
-                // when done, update your UI and/or model on the main queue
-            //}
         }
     }
     
     func dimScreen(){
-//        let path = NSBundle.mainBundle().pathForResource("dim", ofType: "script")
-//        let url = NSURL(string: path!)
-//        let urlString: String = url!.path!
-//        //
-//        //        let contentData = NSFileManager.defaultManager().contentsAtPath(path!)
-//        //
-//        //        let content = NSString(data: url!, encoding: NSUTF8StringEncoding) as? String
-//        
-//        let tempString = "\(urlString)"
-//        for _ in 1...20{
-//            let task = NSTask()
-//            task.launchPath="/usr/bin/osascript"
-//            //TODO Make locally called script file
-//            
-//            task.arguments = [tempString]
-//            task.launch()
-//        }
-        print("dim")
+        let path = NSBundle.mainBundle().pathForResource("dim", ofType: "script")
+        let url = NSURL(string: path!)
+        let urlString: String = url!.path!
+        //
+        //        let contentData = NSFileManager.defaultManager().contentsAtPath(path!)
+        //
+        //        let content = NSString(data: url!, encoding: NSUTF8StringEncoding) as? String
+        
+        let tempString = "\(urlString)"
+        for _ in 1...20{
+            let task = NSTask()
+            task.launchPath="/usr/bin/osascript"
+            //TODO Make locally called script file
+            
+            task.arguments = [tempString]
+            task.launch()
+        }
     }
     
     func showPopover(sender: AnyObject?) {
