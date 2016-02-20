@@ -11,7 +11,7 @@ $view =
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
             <script src="dist/m2x-3.1.0.js"></script>
-            <script src="m2xData.js"><</script>
+            <script src="m2xAPI.js"><</script>
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
 
@@ -56,45 +56,5 @@ $view =
                             }
                         }(document, 'script', 'twitter-wjs');
                     </script>
-                    <script>
-                        window.onload = function() {
-                            var xmlhttp = new XMLHttpRequest();
-                            var url = "http://api-m2x.att.com/v2/devices/286efac3f04c4a7433c6f94116f80a24/streams/tilt/values";
-
-                            xmlhttp.onreadystatechange = function() {
-                                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                                    var myArr = JSON.parse(xmlhttp.responseText);
-                                    myFunction(myArr);
-                                }
-                            };
-                            xmlhttp.open("GET", url, true);
-                            xmlhttp.setRequestHeader("Content-Type","application/json");
-                            xmlhttp.setRequestHeader("X-M2X-KEY","83ffdd46ec1f3a278c0188dc034784d7");
-                            xmlhttp.send();
-
-                            function myFunction(arr) {
-                                var out = "";
-                                var i;
-                                for(i = 0; i < arr.length; i++) {
-                                    out += '<a href="' + arr[i].url + '">' +
-                                            arr[i].display + '</a><br>';
-                                }
-                                document.getElementById("id01").innerHTML = out;
-                            }
-                        }
-
-                    </script>
-            </div>
-                <label>API Key:</label>
-                <input type="text" name="api-key">
-
-                <label>Device ID:</label>
-                <input type="text" name="device-id">
-
-                <fieldset id="device-view">
-                    <legend>Get device information</legend>
-                    <pre><code></code></pre>
-                    <button>Get</button>
-                </fieldset>
         </body>
     </html>

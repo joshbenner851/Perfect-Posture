@@ -1,7 +1,3 @@
-/**
- * Created by Joel on 20/02/2016.
- */
-
 (function($) {
     function M2XExample() {
         this.$statusBar = $("#status-bar span");
@@ -17,8 +13,8 @@
         this.bindEvents();
 
         // Load api/device values from localStorage (if any)
-        this.$apiKey.val( localStorage.getItem("api-key") || "" );
-        this.$deviceID.val( localStorage.getItem("device-id") || "" );
+        this.$apiKey.val("998504e1187bdc1efa139ff76457103c");
+        this.$deviceID.val("7082aca62cfcf826b8ccaf050e32fa67");
         this.onKeyChange();
         this.ondeviceChange();
     }
