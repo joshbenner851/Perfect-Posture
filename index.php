@@ -1,3 +1,7 @@
+<?php
+
+?>
+
 <!DOCTYPE html>
 <html>
 	<head lang="en">
@@ -13,11 +17,6 @@
 			<div class="row">
 				<p class="text-center"><img src="">Sign in with Twitter</p>
 			</div>
-			<script type="text/javascript">
-				var xhr = new XMLHttpRequest();
-				xhr.open("GET", "https://www.codecademy.com/", false);
-				xhr.send();
-			</script>
 		</div>
 	</body>
 </html>
