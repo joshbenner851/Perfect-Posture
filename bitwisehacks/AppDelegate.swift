@@ -18,14 +18,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     let statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(-1)
     
-    //
-    //  main.swift
-    //  dimmer
-    //
-    //  Created by Josh Benner on 2/20/16.
-    //  Copyright © 2016 Josh Benner. All rights reserved.
-    
-    
     func httpGet(callback: (String, String?) -> Void) {
         
         let url: NSURL = NSURL(string: "https://api-m2x.att.com/v2/devices/286efac3f04c4a7433c6f94116f80a24/streams/posture/values?limit=2")!
@@ -119,17 +111,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let path = NSBundle.mainBundle().pathForResource("dim", ofType: "script")
         let url = NSURL(string: path!)
         let urlString: String = url!.path!
-        //
-        //        let contentData = NSFileManager.defaultManager().contentsAtPath(path!)
-        //
-        //        let content = NSString(data: url!, encoding: NSUTF8StringEncoding) as? String
-        
+
         let tempString = "\(urlString)"
         for _ in 1...20{
             let task = NSTask()
             task.launchPath="/usr/bin/osascript"
-            //TODO Make locally called script file
-            
             task.arguments = [tempString]
             task.launch()
         }
@@ -151,14 +137,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         } else {
             showPopover(sender)
         }
-    }
-    
-    //Prints Quote to Console
-    func printQuote(sender: AnyObject) {
-        let quoteText = "Never put off until tomorrow what you can do the day after tomorrow."
-        let quoteAuthor = "Mark Twain"
-        
-        print("\(quoteText) — \(quoteAuthor)")
     }
     
     let popover = NSPopover()
