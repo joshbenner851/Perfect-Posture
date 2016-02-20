@@ -51,9 +51,7 @@ extension QuotesViewController {
            
         task.arguments = [tempString]
         task.launch()
-        
-        
-        
+
         }
     }
     
