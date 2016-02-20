@@ -1,26 +1,39 @@
-<?php
-require __DIR__ . '/lib/posture.inc.php';
-$view =
-?>
+
 
 <!DOCTYPE html>
     <html>
         <head lang="en">
             <meta charset="UTF-">
-            <title>Posture Perfect</title>
+            <title>Posture Perfect - Josh Benner</title>
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
             <script src="dist/m2x-3.1.0.js"></script>
             <script src="m2xAPI.js"></script>
             <script src="Chart.js"></script>
             <style>
+
+                body{
+                    height: 100%;
+                    background: linear-gradient(lightblue, white);
+                }
+
+                .col-md-3{
+                    background: #f4f4f4;
+                    border-radius: 2px;
+                    box-shadow: 2px 2px 2px #888888;
+                }
+
+                .col-md-9{
+                    background: #f4f4f4;
+                    border-radius: 2px;
+                    box-shadow: 2px 2px 2px #888888;
+                }
                 .container {
                     margin-top: 75px;
                 }
             </style>
             <script type="text/javascript" src="http://d3js.org/d3.v2.js"></script>
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-
 
         </head>
 
@@ -29,12 +42,11 @@ $view =
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-4 navbar-header">
-                            <p><a class="navbar-brand" href="index.html">Perfect Posture</a></p>
+                            <p><a class="navbar-brand" href="index.html">Perfect Posture - Josh Benner</a></p>
                         </div>
                         <div class="col-md-8 col-md-offset-6 collapse navbar-collapse" id="nav_content">
                             <ul class="nav navbar-nav">
-                                <li><a href="#menu">Menu</a></li>
-                                <li><a href="#work">Profile</a></li>
+                                <li><a href="index1.html">Logout</a></li>
                                 <li><a href="http://github.com/joshbenner851"><i class="fa fa-github-square fa-2x"></i></a></li>
                             </ul>
                         </div>
@@ -45,16 +57,20 @@ $view =
             <div class="container">
                 <div class="row">
                     <div class="col-md-3 info">
-                        <p><img class="img-circle" src="../JoshBennerPic.jpg" alt="user image" width="300" height="300" style="width: 10em; height: auto"></p>
+                        <p><img class="img-circle" src="../JoshBennerPic.jpg" alt="user image" width="300" height="300" style=" border:7px solid white;
+    border-radius: 500px; width: 10em; height: auto; display: block; margin-left: auto; margin-right: auto; margin-top: 15px;"></p>
                         <p>Name: Josh Benner</p>
+                        <hr>
                         <p class="score">Score: </p>
-                        <p>Achievements:</p>
+                        <hr>
                         <div>
-                            <p><img src="../images.jpeg"></p>
+                            <p>Achievements:</p>
+                            <p><img src="../images.jpeg" width="80%" height="80%"></p>
                             <p><img src=""></p>
                             <p><img src=""></p>
                             <p><img src=""></p>
                         </div>
+                        <hr>
                     </div>
                     <script>
                         !function(d,s,id)
@@ -70,7 +86,7 @@ $view =
                         }(document, 'script', 'twitter-wjs');
                     </script>
                     <div class="col-md-9">
-                        <canvas id="canvas" height="450" width="600"></canvas>
+                        <canvas id="canvas" height="450" width="750"></canvas>
                     </div>
                 </div>
                 <a href="https://twitter.com/share" class="twitter-share-button" data-text="My posture sucked today!" data-via="joshbenner62">Tweet</a>

@@ -54,7 +54,7 @@ window.onload = function() {
 
                     labels.push(tiltData[count].timestamp);
                     avg = sum / count;
-                    alert("avg: ", avg);
+                   // alert("avg: ", avg);
                     data.push( tiltData[count].value );  //change to avg
                     objNum = 0;
                     lastTen = Math.trunc(minute / minutes);
