@@ -1,0 +1,516 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3071EBCE1C7902E800209B65 /* dim.script in Resources */ = {isa = PBXBuildFile; fileRef = 3071EBCD1C7902E800209B65 /* dim.script */; };
+		71C297E51C786FA100340D24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C297E41C786FA100340D24 /* AppDelegate.swift */; };
+		71C297E71C786FA100340D24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71C297E61C786FA100340D24 /* Assets.xcassets */; };
+		71C297EA1C786FA200340D24 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71C297E81C786FA200340D24 /* MainMenu.xib */; };
+		71C297F51C786FA200340D24 /* bitwisehacksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C297F41C786FA200340D24 /* bitwisehacksTests.swift */; };
+		71C298001C786FA200340D24 /* bitwisehacksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C297FF1C786FA200340D24 /* bitwisehacksUITests.swift */; };
+		71C2980F1C7886E700340D24 /* QuotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C2980D1C7886E700340D24 /* QuotesViewController.swift */; };
+		71C298101C7886E700340D24 /* QuotesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71C2980E1C7886E700340D24 /* QuotesViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		71C297F11C786FA200340D24 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 71C297D91C786FA100340D24 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 71C297E01C786FA100340D24;
+			remoteInfo = bitwisehacks;
+		};
+		71C297FC1C786FA200340D24 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 71C297D91C786FA100340D24 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 71C297E01C786FA100340D24;
+			remoteInfo = bitwisehacks;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3071EBCD1C7902E800209B65 /* dim.script */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = dim.script; path = Assets.xcassets/resources/dim.script; sourceTree = "<group>"; };
+		71C297E11C786FA100340D24 /* bitwisehacks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bitwisehacks.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		71C297E41C786FA100340D24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		71C297E61C786FA100340D24 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		71C297E91C786FA200340D24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		71C297EB1C786FA200340D24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		71C297F01C786FA200340D24 /* bitwisehacksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bitwisehacksTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		71C297F41C786FA200340D24 /* bitwisehacksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bitwisehacksTests.swift; sourceTree = "<group>"; };
+		71C297F61C786FA200340D24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		71C297FB1C786FA200340D24 /* bitwisehacksUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bitwisehacksUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		71C297FF1C786FA200340D24 /* bitwisehacksUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bitwisehacksUITests.swift; sourceTree = "<group>"; };
+		71C298011C786FA200340D24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		71C2980D1C7886E700340D24 /* QuotesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuotesViewController.swift; sourceTree = "<group>"; };
+		71C2980E1C7886E700340D24 /* QuotesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuotesViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		71C297DE1C786FA100340D24 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		71C297ED1C786FA200340D24 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		71C297F81C786FA200340D24 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		714231CF1C78D7FE0042EF6E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3071EBCD1C7902E800209B65 /* dim.script */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		71C297D81C786FA100340D24 = {
+			isa = PBXGroup;
+			children = (
+				71C297E31C786FA100340D24 /* bitwisehacks */,
+				71C297F31C786FA200340D24 /* bitwisehacksTests */,
+				71C297FE1C786FA200340D24 /* bitwisehacksUITests */,
+				71C297E21C786FA100340D24 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		71C297E21C786FA100340D24 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				71C297E11C786FA100340D24 /* bitwisehacks.app */,
+				71C297F01C786FA200340D24 /* bitwisehacksTests.xctest */,
+				71C297FB1C786FA200340D24 /* bitwisehacksUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		71C297E31C786FA100340D24 /* bitwisehacks */ = {
+			isa = PBXGroup;
+			children = (
+				714231CF1C78D7FE0042EF6E /* Resources */,
+				71C297E41C786FA100340D24 /* AppDelegate.swift */,
+				71C2980D1C7886E700340D24 /* QuotesViewController.swift */,
+				71C2980E1C7886E700340D24 /* QuotesViewController.xib */,
+				71C297E61C786FA100340D24 /* Assets.xcassets */,
+				71C297E81C786FA200340D24 /* MainMenu.xib */,
+				71C297EB1C786FA200340D24 /* Info.plist */,
+			);
+			path = bitwisehacks;
+			sourceTree = "<group>";
+		};
+		71C297F31C786FA200340D24 /* bitwisehacksTests */ = {
+			isa = PBXGroup;
+			children = (
+				71C297F41C786FA200340D24 /* bitwisehacksTests.swift */,
+				71C297F61C786FA200340D24 /* Info.plist */,
+			);
+			path = bitwisehacksTests;
+			sourceTree = "<group>";
+		};
+		71C297FE1C786FA200340D24 /* bitwisehacksUITests */ = {
+			isa = PBXGroup;
+			children = (
+				71C297FF1C786FA200340D24 /* bitwisehacksUITests.swift */,
+				71C298011C786FA200340D24 /* Info.plist */,
+			);
+			path = bitwisehacksUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		71C297E01C786FA100340D24 /* bitwisehacks */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 71C298041C786FA200340D24 /* Build configuration list for PBXNativeTarget "bitwisehacks" */;
+			buildPhases = (
+				71C297DD1C786FA100340D24 /* Sources */,
+				71C297DE1C786FA100340D24 /* Frameworks */,
+				71C297DF1C786FA100340D24 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = bitwisehacks;
+			productName = bitwisehacks;
+			productReference = 71C297E11C786FA100340D24 /* bitwisehacks.app */;
+			productType = "com.apple.product-type.application";
+		};
+		71C297EF1C786FA200340D24 /* bitwisehacksTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 71C298071C786FA200340D24 /* Build configuration list for PBXNativeTarget "bitwisehacksTests" */;
+			buildPhases = (
+				71C297EC1C786FA200340D24 /* Sources */,
+				71C297ED1C786FA200340D24 /* Frameworks */,
+				71C297EE1C786FA200340D24 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				71C297F21C786FA200340D24 /* PBXTargetDependency */,
+			);
+			name = bitwisehacksTests;
+			productName = bitwisehacksTests;
+			productReference = 71C297F01C786FA200340D24 /* bitwisehacksTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		71C297FA1C786FA200340D24 /* bitwisehacksUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 71C2980A1C786FA200340D24 /* Build configuration list for PBXNativeTarget "bitwisehacksUITests" */;
+			buildPhases = (
+				71C297F71C786FA200340D24 /* Sources */,
+				71C297F81C786FA200340D24 /* Frameworks */,
+				71C297F91C786FA200340D24 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				71C297FD1C786FA200340D24 /* PBXTargetDependency */,
+			);
+			name = bitwisehacksUITests;
+			productName = bitwisehacksUITests;
+			productReference = 71C297FB1C786FA200340D24 /* bitwisehacksUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		71C297D91C786FA100340D24 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Robert Olsthoorn";
+				TargetAttributes = {
+					71C297E01C786FA100340D24 = {
+						CreatedOnToolsVersion = 7.0.1;
+					};
+					71C297EF1C786FA200340D24 = {
+						CreatedOnToolsVersion = 7.0.1;
+						TestTargetID = 71C297E01C786FA100340D24;
+					};
+					71C297FA1C786FA200340D24 = {
+						CreatedOnToolsVersion = 7.0.1;
+						TestTargetID = 71C297E01C786FA100340D24;
+					};
+				};
+			};
+			buildConfigurationList = 71C297DC1C786FA100340D24 /* Build configuration list for PBXProject "bitwisehacks" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 71C297D81C786FA100340D24;
+			productRefGroup = 71C297E21C786FA100340D24 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				71C297E01C786FA100340D24 /* bitwisehacks */,
+				71C297EF1C786FA200340D24 /* bitwisehacksTests */,
+				71C297FA1C786FA200340D24 /* bitwisehacksUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		71C297DF1C786FA100340D24 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71C298101C7886E700340D24 /* QuotesViewController.xib in Resources */,
+				71C297E71C786FA100340D24 /* Assets.xcassets in Resources */,
+				3071EBCE1C7902E800209B65 /* dim.script in Resources */,
+				71C297EA1C786FA200340D24 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		71C297EE1C786FA200340D24 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		71C297F91C786FA200340D24 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		71C297DD1C786FA100340D24 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71C297E51C786FA100340D24 /* AppDelegate.swift in Sources */,
+				71C2980F1C7886E700340D24 /* QuotesViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		71C297EC1C786FA200340D24 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71C297F51C786FA200340D24 /* bitwisehacksTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		71C297F71C786FA200340D24 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71C298001C786FA200340D24 /* bitwisehacksUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		71C297F21C786FA200340D24 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 71C297E01C786FA100340D24 /* bitwisehacks */;
+			targetProxy = 71C297F11C786FA200340D24 /* PBXContainerItemProxy */;
+		};
+		71C297FD1C786FA200340D24 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 71C297E01C786FA100340D24 /* bitwisehacks */;
+			targetProxy = 71C297FC1C786FA200340D24 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		71C297E81C786FA200340D24 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				71C297E91C786FA200340D24 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		71C298021C786FA200340D24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		71C298031C786FA200340D24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		71C298051C786FA200340D24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = bitwisehacks/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.robertolsthoorn.bitwisehacks;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		71C298061C786FA200340D24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = bitwisehacks/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.robertolsthoorn.bitwisehacks;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		71C298081C786FA200340D24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = bitwisehacksTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.robertolsthoorn.bitwisehacksTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/bitwisehacks.app/Contents/MacOS/bitwisehacks";
+			};
+			name = Debug;
+		};
+		71C298091C786FA200340D24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = bitwisehacksTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.robertolsthoorn.bitwisehacksTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/bitwisehacks.app/Contents/MacOS/bitwisehacks";
+			};
+			name = Release;
+		};
+		71C2980B1C786FA200340D24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = bitwisehacksUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.robertolsthoorn.bitwisehacksUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = bitwisehacks;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		71C2980C1C786FA200340D24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = bitwisehacksUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.robertolsthoorn.bitwisehacksUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = bitwisehacks;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		71C297DC1C786FA100340D24 /* Build configuration list for PBXProject "bitwisehacks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				71C298021C786FA200340D24 /* Debug */,
+				71C298031C786FA200340D24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		71C298041C786FA200340D24 /* Build configuration list for PBXNativeTarget "bitwisehacks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				71C298051C786FA200340D24 /* Debug */,
+				71C298061C786FA200340D24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		71C298071C786FA200340D24 /* Build configuration list for PBXNativeTarget "bitwisehacksTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				71C298081C786FA200340D24 /* Debug */,
+				71C298091C786FA200340D24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		71C2980A1C786FA200340D24 /* Build configuration list for PBXNativeTarget "bitwisehacksUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				71C2980B1C786FA200340D24 /* Debug */,
+				71C2980C1C786FA200340D24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 71C297D91C786FA100340D24 /* Project object */;
+}
