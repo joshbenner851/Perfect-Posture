@@ -26,6 +26,13 @@ window.onload = function() {
             console.log("score: ", score);
         });
 
+    var xhr3 = m2x.devices.streamValues(DEVICE_KEY,
+        "streak", function() {
+            score = JSON.parse(xhr3.response).values[0].value;
+            $(".streak").append(score , " days");
+            console.log("score: ", score);
+        });
+
     var xhr = m2x.devices.streamValues(DEVICE_KEY,
         "posture", function() {
         tiltData = JSON.parse(xhr.response).values;
@@ -46,7 +53,6 @@ window.onload = function() {
             var objNum = 0;
             while( day == tiltData[count].timestamp.slice(5,7) && count < tiltData.length &&  typeof(tiltData[count].timestamp) != undefined )
             {
-
                 currentData = tiltData[count].timestamp;
                 var minute = currentData.slice(15,16);
                 if( Math.trunc( minute / minutes) != lastTen && avg != NaN )
