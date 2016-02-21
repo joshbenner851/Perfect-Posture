@@ -89,9 +89,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                             if isCalibrating {
                                 print("calibrating...")
                                 calibrateCount = calibrateCount - 1
+                                print("calibrate count")
+                                print(calibrateCount)
                                 calibrateSum = calibrateSum + sum/count
-                                if 0 == calibrateCount {
-                                    threshold = (calibrateSum / 3) - 20
+                                if 0 >= calibrateCount {
+                                    threshold = (calibrateSum / 3) - 10 - (2 * sensitivity)
+                                    calibrateCount = 3
+                                    calibrateSum = 0
                                     isCalibrating = false
                                     print("new threshold")
                                     print(threshold)
