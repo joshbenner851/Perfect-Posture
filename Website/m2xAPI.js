@@ -79,6 +79,8 @@ window.onload = function() {
                 strokeColor : "#ACC26D",
                 pointColor : "#fff",
                 pointStrokeColor : "#9DB86D",
+                responsive: true,
+                maintainAspectRatio: true,
                 data : data
             }]
         };
