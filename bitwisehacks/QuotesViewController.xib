@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="8191" systemVersion="14F1605" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9531"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="8191"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="QuotesViewController" customModule="bitwisehacks" customModuleProvider="target">
             <connections>
                 <outlet property="calibrate" destination="nrB-Vg-s5S" id="m85-8t-uU1"/>
                 <outlet property="calibrateButton" destination="nrB-Vg-s5S" id="P5l-c2-W99"/>
-                <outlet property="labelPause" destination="aHV-Zd-UhX" id="huI-il-LPW"/>
                 <outlet property="slider" destination="NJC-TH-pDc" id="Ygv-3A-uwZ"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
@@ -20,7 +19,7 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3pA-7X-jy8">
-                    <rect key="frame" x="100" y="13" width="66" height="32"/>
+                    <rect key="frame" x="61" y="60" width="66" height="32"/>
                     <buttonCell key="cell" type="push" title="Quit" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="RJ0-0q-xXZ">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
@@ -29,35 +28,13 @@
                         <action selector="quit:" target="-2" id="sX7-vQ-r8C"/>
                     </connections>
                 </button>
-                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p6P-7I-uH6">
-                    <rect key="frame" x="220" y="37" width="202" height="136"/>
-                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Evolution" id="Jdl-4X-ZU2"/>
-                </imageView>
                 <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s79-w7-LNX">
-                    <rect key="frame" x="218" y="11" width="206" height="21"/>
+                    <rect key="frame" x="218" y="11" width="206" height="20"/>
                     <sliderCell key="cell" alignment="left" maxValue="10" doubleValue="5" tickMarkPosition="above" sliderType="linear" id="NJC-TH-pDc"/>
                     <connections>
                         <action selector="changeSlider:" target="-2" id="LR6-Bu-BeW"/>
                     </connections>
                 </slider>
-                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nrB-Vg-s5S">
-                    <rect key="frame" x="46" y="122" width="96" height="32"/>
-                    <buttonCell key="cell" type="push" title="Calibrate" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="iaA-Gq-dZj">
-                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system"/>
-                    </buttonCell>
-                    <connections>
-                        <action selector="calibrate:" target="-2" id="OHs-SO-bCz"/>
-                    </connections>
-                </button>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ben-Hb-kbI">
-                    <rect key="frame" x="35" y="90" width="119" height="31"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Calibration Setting" id="hFx-YU-fsS">
-                        <font key="font" metaFont="system"/>
-                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bnC-lb-qCn">
                     <rect key="frame" x="159" y="168" width="104" height="17"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Posture Perfect" id="XVW-uE-U4J">
@@ -66,24 +43,18 @@
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aHV-Zd-UhX">
-                    <rect key="frame" x="20" y="13" width="79" height="32"/>
-                    <buttonCell key="cell" type="push" title="Pause" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="mAw-Y9-UgH">
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p6P-7I-uH6">
+                    <rect key="frame" x="220" y="37" width="202" height="136"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Evolution" id="Jdl-4X-ZU2"/>
+                </imageView>
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nrB-Vg-s5S">
+                    <rect key="frame" x="46" y="99" width="96" height="32"/>
+                    <buttonCell key="cell" type="push" title="Calibrate" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="iaA-Gq-dZj">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
                     <connections>
-                        <action selector="togglePause:" target="-2" id="vQd-ci-hfm"/>
-                    </connections>
-                </button>
-                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FGh-mf-5w2">
-                    <rect key="frame" x="343" y="157" width="65" height="32"/>
-                    <buttonCell key="cell" type="push" title="Dim" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="7NL-FX-KgQ">
-                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system"/>
-                    </buttonCell>
-                    <connections>
-                        <action selector="dimScreen:" target="-2" id="i9E-zf-glp"/>
+                        <action selector="calibrate:" target="-2" id="OHs-SO-bCz"/>
                     </connections>
                 </button>
             </subviews>

@@ -12,6 +12,7 @@ var isCalibrating = false
 var paused = false;
 var sensitivity = 0;
 var threshold = 30;
+var CALIBRATED = ""
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -45,6 +46,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         task.resume()
     }
     
+    let popover = NSPopover()
+    
     func applicationDidFinishLaunching(notification: NSNotification) {
         
         //var threshold = 45
@@ -55,10 +58,23 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             button.action = Selector("togglePopover:")
         }
         
+        NSApplication.sharedApplication().activateIgnoringOtherApps(true)
         popover.contentViewController = QuotesViewController(nibName: "QuotesViewController", bundle: nil)
+        popover.behavior = .Transient
         mainCall()
     }
     
+//    func application(application: NSApplication!, didFinishLaunchingWithOptions launchOptions: NSDictionary!) -> Bool {
+//        NSNotificationCenter.defaultCenter().addObserver(self, selector: "setImageViewNotification:", name: "MySetImageViewNotification", object: nil)
+//        return true
+//    }
+//    
+//    func setImageViewNotification(note: NSNotification){
+//        let userInfo = note.userInfo as! [String: NSImageView]
+//        let imageView = userInfo["imageView"]
+//        imageView?.image = NSImage(named: "image.png")
+//    }
+//    
     func mainCall(){
         let queue = NSOperationQueue()
         
@@ -100,6 +116,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                                     print("new threshold")
                                     print(threshold)
                                     print("\n")
+                                    CALIBRATED = "Successfully Calibrated"
                                 }
                             }
                                 //Adding sensitivity from the slider to scale value
@@ -153,7 +170,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
     }
     
-    let popover = NSPopover()
+    
+    
+    //popover.behavior = .Transient
+    
     
     
 }
